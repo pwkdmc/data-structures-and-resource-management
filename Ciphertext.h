@@ -1,22 +1,22 @@
-#pragma once
+п»ї#pragma once
 
-// Шифрование текста шифром Цезаря
-void CaesarСipher(const std::string& text);
+// РЁРёС„СЂРѕРІР°РЅРёРµ С‚РµРєСЃС‚Р° С€РёС„СЂРѕРј Р¦РµР·Р°СЂСЏ
+void CaesarРЎipher(const std::string& text);
 
-// Вывод статистики символов
+// Р’С‹РІРѕРґ СЃС‚Р°С‚РёСЃС‚РёРєРё СЃРёРјРІРѕР»РѕРІ
 void StatisticsCharacters(const std::string& text);
 
-// Проверка слова на палиндром
+// РџСЂРѕРІРµСЂРєР° СЃР»РѕРІР° РЅР° РїР°Р»РёРЅРґСЂРѕРј
 bool CheckPalindrome(const std::string& word);
 
-// Вывод статистики слов
+// Р’С‹РІРѕРґ СЃС‚Р°С‚РёСЃС‚РёРєРё СЃР»РѕРІ
 void StatisticsWords(const std::string& text);
 
-// Вывод статистики предложений
+// Р’С‹РІРѕРґ СЃС‚Р°С‚РёСЃС‚РёРєРё РїСЂРµРґР»РѕР¶РµРЅРёР№
 void StatisticsSentences(const std::string& text);
 
-// Вывод статистики цифр
+// Р’С‹РІРѕРґ СЃС‚Р°С‚РёСЃС‚РёРєРё С†РёС„СЂ
 void StatisticsNumbers(const std::string& text);
 
-// Интерактивный цикл для умного анализатора успеваемости
+// РРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ С†РёРєР» РґР»СЏ СѓРјРЅРѕРіРѕ Р°РЅР°Р»РёР·Р°С‚РѕСЂР° СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё
 void Cliphertext();

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -19,16 +19,16 @@ void AddBook(std::vector<Book>& books) {
     do
     {
         std::cout << std::endl
-            << "= ДОБАВЛЕНИЕ НОВОЙ КНИГИ =" << std::endl;
+            << "= Р”РћР‘РђР’Р›Р•РќРР• РќРћР’РћР™ РљРќРР“Р =" << std::endl;
         std::string author;
-        std::cout << "Введите автора:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР°:" << std::endl;
         std::getline(std::cin, author);
         std::string name;
-        std::cout << "Введите название:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ:" << std::endl;
         std::getline(std::cin, name);
         int year = -1;
         while (year < 1) {
-            std::cout << "Введите год издания:" << std::endl;
+            std::cout << "Р’РІРµРґРёС‚Рµ РіРѕРґ РёР·РґР°РЅРёСЏ:" << std::endl;
             std::cin >> year;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -38,15 +38,15 @@ void AddBook(std::vector<Book>& books) {
                 year = -1;
             }
             if (year < 1) {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         }
         std::string genre;
-        std::cout << "Введите жанр:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ Р¶Р°РЅСЂ:" << std::endl;
         std::getline(std::cin, genre);
         int available = -1;
         while (available != 0 && available != 1) {
-            std::cout << "Введите статус доступности (0 - не доступна, 1 - доступна):" << std::endl;
+            std::cout << "Р’РІРµРґРёС‚Рµ СЃС‚Р°С‚СѓСЃ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё (0 - РЅРµ РґРѕСЃС‚СѓРїРЅР°, 1 - РґРѕСЃС‚СѓРїРЅР°):" << std::endl;
             std::cin >> available;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -56,18 +56,18 @@ void AddBook(std::vector<Book>& books) {
                 available = -1;
             }
             if (available != 0 && available != 1) {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         }
         books.push_back(Book(author, name, year, genre, (available == 0 ? false : true)));
         do
         {
             std::cout << std::endl
-                << "Задача завершена" << std::endl;
-            std::cout << "1. Выполнить задачу еще раз" << std::endl;
-            std::cout << "0. Выход" << std::endl
+                << "Р—Р°РґР°С‡Р° Р·Р°РІРµСЂС€РµРЅР°" << std::endl;
+            std::cout << "1. Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°С‡Сѓ РµС‰Рµ СЂР°Р·" << std::endl;
+            std::cout << "0. Р’С‹С…РѕРґ" << std::endl
                 << std::endl;
-            std::cout << "Выберите действие:" << std::endl;
+            std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -78,7 +78,7 @@ void AddBook(std::vector<Book>& books) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -89,9 +89,9 @@ void NameSearch(std::vector<Book>& books) {
     do
     {
         std::cout << std::endl
-            << "= ПОИСК ПО НАЗВАНИЮ =" << std::endl;
+            << "= РџРћРРЎРљ РџРћ РќРђР—Р’РђРќРР® =" << std::endl;
         std::string name;
-        std::cout << "Введите название:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ:" << std::endl;
         std::getline(std::cin, name);
         std::vector<Book> found_books;
         for (Book book : books) {
@@ -100,11 +100,11 @@ void NameSearch(std::vector<Book>& books) {
             }
         }
         if (found_books.size() == 0) {
-            std::cout << "Книги не найдены" << std::endl;
+            std::cout << "РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹" << std::endl;
         }
         else
         {
-            std::cout << "Найденные книги:" << std::endl;
+            std::cout << "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё:" << std::endl;
             for (Book book : found_books) {
                 std::cout << book.author << " \"" << book.name << "\" " << book.year << " " << book.genre << " " << (book.is_available ? "+" : "-") << std::endl;
             }
@@ -112,11 +112,11 @@ void NameSearch(std::vector<Book>& books) {
         do
         {
             std::cout << std::endl
-                << "Задача завершена" << std::endl;
-            std::cout << "1. Выполнить задачу еще раз" << std::endl;
-            std::cout << "0. Выход" << std::endl
+                << "Р—Р°РґР°С‡Р° Р·Р°РІРµСЂС€РµРЅР°" << std::endl;
+            std::cout << "1. Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°С‡Сѓ РµС‰Рµ СЂР°Р·" << std::endl;
+            std::cout << "0. Р’С‹С…РѕРґ" << std::endl
                 << std::endl;
-            std::cout << "Выберите действие:" << std::endl;
+            std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -127,7 +127,7 @@ void NameSearch(std::vector<Book>& books) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -138,9 +138,9 @@ void AuthorSearch(std::vector<Book>& books) {
     do
     {
         std::cout << std::endl
-            << "= ПОИСК ПО АВТОРУ =" << std::endl;
+            << "= РџРћРРЎРљ РџРћ РђР’РўРћР РЈ =" << std::endl;
         std::string author;
-        std::cout << "Введите автора:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР°:" << std::endl;
         std::getline(std::cin, author);
         std::vector<Book> found_books;
         for (Book book : books) {
@@ -149,11 +149,11 @@ void AuthorSearch(std::vector<Book>& books) {
             }
         }
         if (found_books.size() == 0) {
-            std::cout << "Книги не найдены" << std::endl;
+            std::cout << "РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹" << std::endl;
         }
         else
         {
-            std::cout << "Найденные книги:" << std::endl;
+            std::cout << "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё:" << std::endl;
             for (Book book : found_books) {
                 std::cout << book.author << " \"" << book.name << "\" " << book.year << " " << book.genre << " " << (book.is_available ? "+" : "-") << std::endl;
             }
@@ -161,11 +161,11 @@ void AuthorSearch(std::vector<Book>& books) {
         do
         {
             std::cout << std::endl
-                << "Задача завершена" << std::endl;
-            std::cout << "1. Выполнить задачу еще раз" << std::endl;
-            std::cout << "0. Выход" << std::endl
+                << "Р—Р°РґР°С‡Р° Р·Р°РІРµСЂС€РµРЅР°" << std::endl;
+            std::cout << "1. Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°С‡Сѓ РµС‰Рµ СЂР°Р·" << std::endl;
+            std::cout << "0. Р’С‹С…РѕРґ" << std::endl
                 << std::endl;
-            std::cout << "Выберите действие:" << std::endl;
+            std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -176,7 +176,7 @@ void AuthorSearch(std::vector<Book>& books) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -187,9 +187,9 @@ void GenreSearch(std::vector<Book>& books) {
     do
     {
         std::cout << std::endl
-            << "= ПОИСК ПО ЖАНРУ =" << std::endl;
+            << "= РџРћРРЎРљ РџРћ Р–РђРќР РЈ =" << std::endl;
         std::string genre;
-        std::cout << "Введите жанр:" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ Р¶Р°РЅСЂ:" << std::endl;
         std::getline(std::cin, genre);
         std::vector<Book> found_books;
         for (Book book : books) {
@@ -198,11 +198,11 @@ void GenreSearch(std::vector<Book>& books) {
             }
         }
         if (found_books.size() == 0) {
-            std::cout << "Книги не найдены" << std::endl;
+            std::cout << "РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹" << std::endl;
         }
         else
         {
-            std::cout << "Найденные книги:" << std::endl;
+            std::cout << "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё:" << std::endl;
             for (Book book : found_books) {
                 std::cout << book.author << " \"" << book.name << "\" " << book.year << " " << book.genre << " " << (book.is_available ? "+" : "-") << std::endl;
             }
@@ -210,11 +210,11 @@ void GenreSearch(std::vector<Book>& books) {
         do
         {
             std::cout << std::endl
-                << "Задача завершена" << std::endl;
-            std::cout << "1. Выполнить задачу еще раз" << std::endl;
-            std::cout << "0. Выход" << std::endl
+                << "Р—Р°РґР°С‡Р° Р·Р°РІРµСЂС€РµРЅР°" << std::endl;
+            std::cout << "1. Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°С‡Сѓ РµС‰Рµ СЂР°Р·" << std::endl;
+            std::cout << "0. Р’С‹С…РѕРґ" << std::endl
                 << std::endl;
-            std::cout << "Выберите действие:" << std::endl;
+            std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -225,14 +225,14 @@ void GenreSearch(std::vector<Book>& books) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
 }
 
 void GenreStatistics(std::vector<Book>& books) {
-    std::cout << std::endl << "Распределение книг по жанрам" << std::endl << std::endl;
+    std::cout << std::endl << "Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РєРЅРёРі РїРѕ Р¶Р°РЅСЂР°Рј" << std::endl << std::endl;
     std::map<std::string, std::vector<Book>> books_genre;
     for (Book book : books) {
         books_genre[book.genre].push_back(book);
@@ -247,7 +247,7 @@ void GenreStatistics(std::vector<Book>& books) {
 }
 
 void YearStatistics(std::vector<Book>& books) {
-    std::cout << std::endl << "Распределение книг по годам" << std::endl << std::endl;
+    std::cout << std::endl << "Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РєРЅРёРі РїРѕ РіРѕРґР°Рј" << std::endl << std::endl;
     std::map<int, std::vector<Book>> books_year;
     for (Book book : books) {
         books_year[book.year].push_back(book);
@@ -262,13 +262,13 @@ void YearStatistics(std::vector<Book>& books) {
 }
 
 void AvailableStatistics(std::vector<Book>& books) {
-    std::cout << std::endl << "Распределение книг по доступности" << std::endl << std::endl;
+    std::cout << std::endl << "Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РєРЅРёРі РїРѕ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё" << std::endl << std::endl;
     std::map<bool, std::vector<Book>> books_available;
     for (Book book : books) {
         books_available[book.is_available].push_back(book);
     }
     for (auto [key, value] : books_available) {
-        std::cout << (key ? "Доступные книги" : "Недоступные книги") << std::endl;
+        std::cout << (key ? "Р”РѕСЃС‚СѓРїРЅС‹Рµ РєРЅРёРіРё" : "РќРµРґРѕСЃС‚СѓРїРЅС‹Рµ РєРЅРёРіРё") << std::endl;
         for (Book book : value) {
             std::cout << book.author << " \"" << book.name << "\" " << book.year << " " << book.genre << " " << (book.is_available ? "+" : "-") << std::endl;
         }
@@ -281,9 +281,9 @@ void StatisticsOutput(std::vector<Book>& books) {
     do
     {
         std::cout << std::endl
-            << "= ВЫВОД СТАТИСТИКИ =" << std::endl;
+            << "= Р’Р«Р’РћР” РЎРўРђРўРРЎРўРРљР =" << std::endl;
         if (books.size() == 0) {
-            std::cout << "Данных нет" << std::endl << std::endl;
+            std::cout << "Р”Р°РЅРЅС‹С… РЅРµС‚" << std::endl << std::endl;
         }
         else {
             GenreStatistics(books);
@@ -292,11 +292,11 @@ void StatisticsOutput(std::vector<Book>& books) {
         }
         do
         {
-            std::cout << "Задача завершена" << std::endl;
-            std::cout << "1. Выполнить задачу еще раз" << std::endl;
-            std::cout << "0. Выход" << std::endl
+            std::cout << "Р—Р°РґР°С‡Р° Р·Р°РІРµСЂС€РµРЅР°" << std::endl;
+            std::cout << "1. Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°С‡Сѓ РµС‰Рµ СЂР°Р·" << std::endl;
+            std::cout << "0. Р’С‹С…РѕРґ" << std::endl
                 << std::endl;
-            std::cout << "Выберите действие:" << std::endl;
+            std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -307,7 +307,7 @@ void StatisticsOutput(std::vector<Book>& books) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+                std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -315,25 +315,25 @@ void StatisticsOutput(std::vector<Book>& books) {
 
 void LibraryManagementSystem() {
     std::vector<Book> books = {
-        Book("Чехов Антон", "Дама с собачкой", 1899, "Рассказ", true),
-        Book("Ремарк Эрих Мария", "Триумфальная арка", 1945, "Роман", false),
-        Book("Дойл Артур Конан", "Этюд в багровых тонах", 1887, "Детектив", true),
-        Book("Чехов Антон", "Враги", 1887, "Рассказ", true),
-        Book("Робертс Нора", "Яд бессмертия", 1996, "Детектив", false)
+        Book("Р§РµС…РѕРІ РђРЅС‚РѕРЅ", "Р”Р°РјР° СЃ СЃРѕР±Р°С‡РєРѕР№", 1899, "Р Р°СЃСЃРєР°Р·", true),
+        Book("Р РµРјР°СЂРє Р­СЂРёС… РњР°СЂРёСЏ", "РўСЂРёСѓРјС„Р°Р»СЊРЅР°СЏ Р°СЂРєР°", 1945, "Р РѕРјР°РЅ", false),
+        Book("Р”РѕР№Р» РђСЂС‚СѓСЂ РљРѕРЅР°РЅ", "Р­С‚СЋРґ РІ Р±Р°РіСЂРѕРІС‹С… С‚РѕРЅР°С…", 1887, "Р”РµС‚РµРєС‚РёРІ", true),
+        Book("Р§РµС…РѕРІ РђРЅС‚РѕРЅ", "Р’СЂР°РіРё", 1887, "Р Р°СЃСЃРєР°Р·", true),
+        Book("Р РѕР±РµСЂС‚СЃ РќРѕСЂР°", "РЇРґ Р±РµСЃСЃРјРµСЂС‚РёСЏ", 1996, "Р”РµС‚РµРєС‚РёРІ", false)
     };
     int issue_number;
     do
     {
         std::cout << std::endl
-            << "== СИСТЕМА УПРАВЛЕНИЯ БИБЛИОТЕКОЙ ==" << std::endl;
-        std::cout << "1. Добавление новой книги" << std::endl;
-        std::cout << "2. Поиск по названию" << std::endl;
-        std::cout << "3. Поиск по автору" << std::endl;
-        std::cout << "4. Поиск по жанру" << std::endl;
-        std::cout << "5. Вывод статистики" << std::endl;
-        std::cout << "0. Выход" << std::endl
+            << "== РЎРРЎРўР•РњРђ РЈРџР РђР’Р›Р•РќРРЇ Р‘РР‘Р›РРћРўР•РљРћР™ ==" << std::endl;
+        std::cout << "1. Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ РєРЅРёРіРё" << std::endl;
+        std::cout << "2. РџРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ" << std::endl;
+        std::cout << "3. РџРѕРёСЃРє РїРѕ Р°РІС‚РѕСЂСѓ" << std::endl;
+        std::cout << "4. РџРѕРёСЃРє РїРѕ Р¶Р°РЅСЂСѓ" << std::endl;
+        std::cout << "5. Р’С‹РІРѕРґ СЃС‚Р°С‚РёСЃС‚РёРєРё" << std::endl;
+        std::cout << "0. Р’С‹С…РѕРґ" << std::endl
             << std::endl;
-        std::cout << "Выберите действие: " << std::endl;
+        std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: " << std::endl;
         std::cin >> issue_number;
         std::cin.ignore(10000, '\n');
         if (std::cin.fail())
@@ -364,7 +364,7 @@ void LibraryManagementSystem() {
         }
         else if (issue_number != 0)
         {
-            std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
+            std::cout << "РћРЁРР‘РљРђ: Р’РІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ" << std::endl;
         }
     } while (issue_number != 0);
 }

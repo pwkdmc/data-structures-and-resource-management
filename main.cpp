@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "SmartPerformanceAnalyzer.h"
 #include "Ciphertext.h"
 #include "StudentDatabase.h"
@@ -14,15 +14,15 @@ int main()
     do
     {
         std::cout << std::endl
-            << "=== ËÀÁÎÐÀÒÎÐÍÀß ÐÀÁÎÒÀ 4 ===" << std::endl;
-        std::cout << "1. Óìíûé àíàëèçàòîð óñïåâàåìîñòè" << std::endl;
-        std::cout << "2. Òåêñò-øèôðîâàëüùèê" << std::endl;
-        std::cout << "3. Áàçà äàííûõ ñòóäåíòîâ" << std::endl;
-        std::cout << "4. Ñèñòåìà óïðàâëåíèÿ áèáëèîòåêîé" << std::endl;
-        std::cout << "5. Èãðà íà ïàìÿòü ñ äèíàìè÷åñêèìè ñòðóêòóðàìè" << std::endl;
-        std::cout << "0. Âûõîä" << std::endl
+            << "=== Ð›ÐÐ‘ÐžÐ ÐÐ¢ÐžÐ ÐÐÐ¯ Ð ÐÐ‘ÐžÐ¢Ð 4 ===" << std::endl;
+        std::cout << "1. Ð£Ð¼Ð½Ñ‹Ð¹ Ð°Ð½Ð°Ð»Ð¸Ð·Ð°Ñ‚Ð¾Ñ€ ÑƒÑÐ¿ÐµÐ²Ð°ÐµÐ¼Ð¾ÑÑ‚Ð¸" << std::endl;
+        std::cout << "2. Ð¢ÐµÐºÑÑ‚-ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð»ÑŒÑ‰Ð¸Ðº" << std::endl;
+        std::cout << "3. Ð‘Ð°Ð·Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð²" << std::endl;
+        std::cout << "4. Ð¡Ð¸ÑÑ‚ÐµÐ¼Ð° ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐ¾Ð¹" << std::endl;
+        std::cout << "5. Ð˜Ð³Ñ€Ð° Ð½Ð° Ð¿Ð°Ð¼ÑÑ‚ÑŒ Ñ Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¸Ð¼Ð¸ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð°Ð¼Ð¸" << std::endl;
+        std::cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´" << std::endl
             << std::endl;
-        std::cout << "Âûáåðèòå äåéñòâèå: " << std::endl;
+        std::cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: " << std::endl;
         std::cin >> issue_number;
         std::cin.ignore(10000, '\n');
         if (std::cin.fail())
@@ -53,7 +53,7 @@ int main()
         }
         else if (issue_number != 0)
         {
-            std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîððåêòíîå ÷èñëî" << std::endl;
+            std::cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << std::endl;
         }
     } while (issue_number != 0);
     return 0;

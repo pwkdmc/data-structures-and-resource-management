@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -56,13 +56,13 @@ void Game() {
     int score = 0;
     MixCards(field);
     while (score < 12) {
-        std::cout << std::endl << "Ñ÷åò: " << score << std::endl;
+        std::cout << std::endl << "Ð¡Ñ‡ÐµÑ‚: " << score << std::endl;
         InputField(field);
         int first = 0;
         int second = 0;
         bool check = false;
         while (!check) {
-            std::cout << "Ââåäèòå äâà äâóçíà÷íûõ ÷èñëà (êîîðäèíàòû êàðò, ñòðîêà+ñòîëáåö):" << std::endl;
+            std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð²Ð° Ð´Ð²ÑƒÐ·Ð½Ð°Ñ‡Ð½Ñ‹Ñ… Ñ‡Ð¸ÑÐ»Ð° (ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ ÐºÐ°Ñ€Ñ‚, ÑÑ‚Ñ€Ð¾ÐºÐ°+ÑÑ‚Ð¾Ð»Ð±ÐµÑ†):" << std::endl;
             check = true;
             std::cin >> first >> second;
             std::cin.ignore(10000, '\n');
@@ -77,7 +77,7 @@ void Game() {
                 first / 10 < 1 || first / 10 > 4 || second / 10 < 1 || second / 10 > 4 ||
                 field[first / 10 - 1][first % 10 - 1].second || field[second / 10 - 1][second % 10 - 1].second ||
                 first == second) {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîððåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << std::endl;
                 check = false;
             }
         }
@@ -92,7 +92,7 @@ void Game() {
             --score;
         }
     }
-    std::cout << std::endl << "Ñ÷åò: " << score << std::endl;
+    std::cout << std::endl << "Ð¡Ñ‡ÐµÑ‚: " << score << std::endl;
     InputField(field);
 }
 
@@ -101,11 +101,11 @@ void MemoryGame() {
     do
     {
         std::cout << std::endl
-            << "== ÈÃÐÀ ÍÀ ÏÀÌßÒÜ Ñ ÄÈÍÀÌÈ×ÅÑÊÈÌÈ ÑÒÐÓÊÒÓÐÀÌÈ ==" << std::endl;
-        std::cout << "1. Íà÷àòü èãðó" << std::endl;
-        std::cout << "0. Âûõîä" << std::endl
+            << "== Ð˜Ð“Ð Ð ÐÐ ÐŸÐÐœÐ¯Ð¢Ð¬ Ð¡ Ð”Ð˜ÐÐÐœÐ˜Ð§Ð•Ð¡ÐšÐ˜ÐœÐ˜ Ð¡Ð¢Ð Ð£ÐšÐ¢Ð£Ð ÐÐœÐ˜ ==" << std::endl;
+        std::cout << "1. ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¸Ð³Ñ€Ñƒ" << std::endl;
+        std::cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´" << std::endl
             << std::endl;
-        std::cout << "Âûáåðèòå äåéñòâèå: " << std::endl;
+        std::cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: " << std::endl;
         std::cin >> issue_number;
         std::cin.ignore(10000, '\n');
         if (std::cin.fail())
@@ -120,7 +120,7 @@ void MemoryGame() {
         }
         else if (issue_number != 0)
         {
-            std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîððåêòíîå ÷èñëî" << std::endl;
+            std::cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << std::endl;
         }
     } while (issue_number != 0);
 }

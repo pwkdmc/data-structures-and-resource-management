@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -6,10 +6,10 @@
 #include <iomanip>
 #include <cmath>
 
-void Caesar—ipher(const std::string& text) {
+void Caesar–°ipher(const std::string& text) {
     int shift = -1;
     while (shift < 0) {
-        std::cout << "¬‚Â‰ËÚÂ Ò‰‚Ë„:" << std::endl;
+        std::cout << "–í–≤–µ–¥–∏—Ç–µ —Å–¥–≤–∏–≥:" << std::endl;
         std::cin >> shift;
         std::cin.ignore(10000, '\n');
         if (std::cin.fail())
@@ -19,10 +19,10 @@ void Caesar—ipher(const std::string& text) {
             shift = -1;
         }
         if (shift < 0) {
-            std::cout << "Œÿ»¡ ¿: ¬‚Â‰ÂÌÓ ÌÂÍÓÂÍÚÌÓÂ ˜ËÒÎÓ" << std::endl;
+            std::cout << "–û–®–ò–ë–ö–ê: –í–≤–µ–¥–µ–Ω–æ –Ω–µ–∫–æ—Ä—Ä–µ–∫—Ç–Ω–æ–µ —á–∏—Å–ª–æ" << std::endl;
         }
     }
-    std::cout << "«‡¯ËÙÓ‚‡ÌÌ˚È ÚÂÍÒÚ" << std::endl;
+    std::cout << "–ó–∞—à–∏—Ñ—Ä–æ–≤–∞–Ω–Ω—ã–π —Ç–µ–∫—Å—Ç" << std::endl;
     for (char c : text) {
         if (c >= 'A' && c <= 'Z') {
             std::cout << static_cast<char>('A' + (c - 'A' + shift) % ('Z' - 'A'));
@@ -30,11 +30,11 @@ void Caesar—ipher(const std::string& text) {
         else if (c >= 'a' && c <= 'z') {
             std::cout << static_cast<char>('a' + (c - 'a' + shift) % ('z' - 'a'));
         }
-        else if (c >= '¿' && c <= 'ﬂ') {
-            std::cout << static_cast<char>('¿' + (c - '¿' + shift) % ('ﬂ' - '¿'));
+        else if (c >= '–ê' && c <= '–Ø') {
+            std::cout << static_cast<char>('–ê' + (c - '–ê' + shift) % ('–Ø' - '–ê'));
         }
-        else if (c >= '‡' && c <= 'ˇ') {
-            std::cout << static_cast<char>('‡' + (c - '‡' + shift) % ('ˇ' - '‡'));
+        else if (c >= '–∞' && c <= '—è') {
+            std::cout << static_cast<char>('–∞' + (c - '–∞' + shift) % ('—è' - '–∞'));
         }
         else {
             std::cout << c;
@@ -48,10 +48,10 @@ void StatisticsCharacters(const std::string& text) {
     for (char c : text) {
         ++characters[c];
     }
-    std::cout << std::endl << "—Ú‡ÚËÒÚËÍ‡ ÒËÏ‚ÓÎÓ‚ ‚ ÚÂÍÒÚÂ" << std::endl;
-    std::cout << "Œ·˘ÂÂ ÍÓÎË˜ÂÒÚ‚Ó ÒËÏ‚ÓÎÓ‚: " << text.size() << std::endl;
+    std::cout << std::endl << "–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ —Å–∏–º–≤–æ–ª–æ–≤ –≤ —Ç–µ–∫—Å—Ç–µ" << std::endl;
+    std::cout << "–û–±—â–µ–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —Å–∏–º–≤–æ–ª–æ–≤: " << text.size() << std::endl;
     for (auto [key, value] : characters) {
-        std::cout << "—ËÏ‚ÓÎ: \'" << key << "\'  ÓÎË˜ÂÒÚ‚Ó ÔÓ‚ÚÓÂÌËÈ: " << value << std::endl;
+        std::cout << "–°–∏–º–≤–æ–ª: \'" << key << "\' –ö–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø–æ–≤—Ç–æ—Ä–µ–Ω–∏–π: " << value << std::endl;
     }
 }
 
@@ -78,12 +78,12 @@ void StatisticsWords(const std::string& text) {
     std::string word;
     int cnt_words = 0;
     for (char c : text) {
-        if (c!= '(' && c != ')' &&c != '.' && c != ' ' && c != '!' && c != '?' && c != ',' && c != ';' && c != ':' && c != '\"' && c != '\'' && c != '´' && c != 'ª') {
+        if (c!= '(' && c != ')' &&c != '.' && c != ' ' && c != '!' && c != '?' && c != ',' && c != ';' && c != ':' && c != '\"' && c != '\'' && c != '¬´' && c != '¬ª') {
             if (c >= 'A' && c <= 'Z') {
                 word.push_back(c - ('A' - 'a'));
             }
-            else if (c >= '¿' && c <= 'ﬂ') {
-                word.push_back(c - ('¿' - '‡'));
+            else if (c >= '–ê' && c <= '–Ø') {
+                word.push_back(c - ('–ê' - '–∞'));
             }
             else {
                 word.push_back(c);
@@ -107,22 +107,22 @@ void StatisticsWords(const std::string& text) {
             palindromes.insert(word);
         }
     }
-    std::cout << std::endl << "—Ú‡ÚËÒÚËÍ‡ ÒÎÓ‚ ‚ ÚÂÍÒÚÂ" << std::endl;
+    std::cout << std::endl << "–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ —Å–ª–æ–≤ –≤ —Ç–µ–∫—Å—Ç–µ" << std::endl;
     if (words.size() == 0) {
-        std::cout << "—ÎÓ‚ ‚ ÚÂÍÒÚÂ ÌÂÚ" << std::endl;
+        std::cout << "–°–ª–æ–≤ –≤ —Ç–µ–∫—Å—Ç–µ –Ω–µ—Ç" << std::endl;
     }
     else 
     {
-        std::cout << "Œ·˘ÂÂ ÍÓÎË˜ÂÒÚ‚Ó ÒÎÓ‚: " << cnt_words << std::endl;
+        std::cout << "–û–±—â–µ–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —Å–ª–æ–≤: " << cnt_words << std::endl;
         for (auto [key, value] : words) {
-            std::cout << "—ÎÓ‚Ó: \"" << key << "\"  ÓÎË˜ÂÒÚ‚Ó ÔÓ‚ÚÓÂÌËÈ: " << value << std::endl;
+            std::cout << "–°–ª–æ–≤–æ: \"" << key << "\" –ö–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø–æ–≤—Ç–æ—Ä–µ–Ω–∏–π: " << value << std::endl;
         }
     }
     if (palindromes.size() == 0) {
-        std::cout << "œ‡ÎËÌ‰ÓÏÓ‚ ‚ ÚÂÍÒÚÂ ÌÂÚ" << std::endl;
+        std::cout << "–ü–∞–ª–∏–Ω–¥—Ä–æ–º–æ–≤ –≤ —Ç–µ–∫—Å—Ç–µ –Ω–µ—Ç" << std::endl;
     } else
     {
-        std::cout << "œ‡ÎËÌ‰ÓÏ˚" << std::endl;
+        std::cout << "–ü–∞–ª–∏–Ω–¥—Ä–æ–º—ã" << std::endl;
         for (std::string word : palindromes) {
             std::cout << "\"" << word << "\"" << std::endl;
         }
@@ -146,15 +146,15 @@ void StatisticsSentences(const std::string& text) {
             sentence.resize(0);
         }
     }
-    std::cout << std::endl << "—Ú‡ÚËÒÚËÍ‡ ÔÂ‰ÎÓÊÂÌËÈ ‚ ÚÂÍÒÚÂ" << std::endl;
+    std::cout << std::endl << "–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ –ø—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–π –≤ —Ç–µ–∫—Å—Ç–µ" << std::endl;
     if (sentences.size() == 0) {
-        std::cout << "œÂ‰ÎÓÊÂÌËÈ ‚ ÚÂÍÒÚÂ ÌÂÚ" << std::endl;
+        std::cout << "–ü—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–π –≤ —Ç–µ–∫—Å—Ç–µ –Ω–µ—Ç" << std::endl;
     }
     else
     {
-        std::cout << "Œ·˘ÂÂ ÍÓÎË˜ÂÒÚ‚Ó ÔÂ‰ÎÓÊÂÌËÈ: " << cnt_sentences << std::endl;
+        std::cout << "–û–±—â–µ–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–π: " << cnt_sentences << std::endl;
         for (auto [key, value] : sentences) {
-            std::cout << "œÂ‰ÎÓÊÂÌËÂ: \"" << key << "\"" << std::endl << " ÓÎË˜ÂÒÚ‚Ó ÔÓ‚ÚÓÂÌËÈ: " << value << std::endl;
+            std::cout << "–ü—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–µ: \"" << key << "\"" << std::endl << "–ö–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø–æ–≤—Ç–æ—Ä–µ–Ω–∏–π: " << value << std::endl;
         }
     }
 }
@@ -168,15 +168,15 @@ void StatisticsNumbers(const std::string& text) {
             ++numbers[c - '0'];
         }
     }
-    std::cout << std::endl << "—Ú‡ÚËÒÚËÍ‡ ˆËÙ ‚ ÚÂÍÒÚÂ" << std::endl;
+    std::cout << std::endl << "–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ —Ü–∏—Ñ—Ä –≤ —Ç–µ–∫—Å—Ç–µ" << std::endl;
     if (numbers.size() == 0) {
-        std::cout << "÷ËÙ ‚ ÚÂÍÒÚÂ ÌÂÚ" << std::endl;
+        std::cout << "–¶–∏—Ñ—Ä –≤ —Ç–µ–∫—Å—Ç–µ –Ω–µ—Ç" << std::endl;
     }
     else
     {
-        std::cout << "Œ·˘ÂÂ ÍÓÎË˜ÂÒÚ‚Ó ˆËÙ: " << cnt_numbers << std::endl;
+        std::cout << "–û–±—â–µ–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —Ü–∏—Ñ—Ä: " << cnt_numbers << std::endl;
         for (auto [key, value] : numbers) {
-            std::cout << "÷ËÙ‡: \"" << key << "\"  ÓÎË˜ÂÒÚ‚Ó ÔÓ‚ÚÓÂÌËÈ: " << value << std::endl;
+            std::cout << "–¶–∏—Ñ—Ä–∞: \"" << key << "\" –ö–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø–æ–≤—Ç–æ—Ä–µ–Ω–∏–π: " << value << std::endl;
         }
     }
 }
@@ -187,10 +187,10 @@ void Cliphertext() {
     do
     {
         std::cout << std::endl
-            << "== “≈ —“-ÿ»‘–Œ¬¿À‹Ÿ»  ==" << std::endl;
-        std::cout << "¬‚Â‰ËÚÂ ÚÂÍÒÚ:" << std::endl;
+            << "== –¢–ï–ö–°–¢-–®–ò–§–†–û–í–ê–õ–¨–©–ò–ö ==" << std::endl;
+        std::cout << "–í–≤–µ–¥–∏—Ç–µ —Ç–µ–∫—Å—Ç:" << std::endl;
         std::getline(std::cin, text);
-        Caesar—ipher(text);
+        Caesar–°ipher(text);
         StatisticsCharacters(text);
         StatisticsWords(text); 
         StatisticsSentences(text);
@@ -199,11 +199,11 @@ void Cliphertext() {
         {
             text.resize(0);
             std::cout << std::endl
-                << "«‡‰‡˜‡ Á‡‚Â¯ÂÌ‡" << std::endl;
-            std::cout << "1. ¬˚ÔÓÎÌËÚ¸ Á‡‰‡˜Û Â˘Â ‡Á" << std::endl;
-            std::cout << "0. ¬˚ıÓ‰" << std::endl
+                << "–ó–∞–¥–∞—á–∞ –∑–∞–≤–µ—Ä—à–µ–Ω–∞" << std::endl;
+            std::cout << "1. –í—ã–ø–æ–ª–Ω–∏—Ç—å –∑–∞–¥–∞—á—É –µ—â–µ —Ä–∞–∑" << std::endl;
+            std::cout << "0. –í—ã—Ö–æ–¥" << std::endl
                 << std::endl;
-            std::cout << "¬˚·ÂËÚÂ ‰ÂÈÒÚ‚ËÂ:" << std::endl;
+            std::cout << "–í—ã–±–µ—Ä–∏—Ç–µ –¥–µ–π—Å—Ç–≤–∏–µ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -214,7 +214,7 @@ void Cliphertext() {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "Œÿ»¡ ¿: ¬‚Â‰ÂÌÓ ÌÂÍÓÂÍÚÌÓÂ ˜ËÒÎÓ" << std::endl;
+                std::cout << "–û–®–ò–ë–ö–ê: –í–≤–µ–¥–µ–Ω–æ –Ω–µ–∫–æ—Ä—Ä–µ–∫—Ç–Ω–æ–µ —á–∏—Å–ª–æ" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);

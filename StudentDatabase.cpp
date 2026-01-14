@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -18,13 +18,13 @@ void AddStudent(std::vector<StudentData>& students) {
     do
     {
         std::cout << std::endl
-            << "= ÄÎÁÀÂËÅÍÈÅ ÍÎÂÎÃÎ ÑÒÓÄÅÍÒÀ =" << std::endl;
+            << "= Ğ”ĞĞ‘ĞĞ’Ğ›Ğ•ĞĞ˜Ğ• ĞĞĞ’ĞĞ“Ğ Ğ¡Ğ¢Ğ£Ğ”Ğ•ĞĞ¢Ğ =" << std::endl;
         std::string name;
-        std::cout << "Ââåäèòå èìÿ ñòóäåíòà:" << std::endl;
+        std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°:" << std::endl;
         std::getline(std::cin, name);
         int age = -1;
         while (age < 1) {
-            std::cout << "Ââåäèòå âîçğàñò ñòóäåíòà:" << std::endl;
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°:" << std::endl;
             std::cin >> age;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -34,12 +34,12 @@ void AddStudent(std::vector<StudentData>& students) {
                 age = -1;
             }
             if (age < 1) {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         }
         int cnt_subjects = -1;
         while (cnt_subjects < 1) {
-            std::cout << "Ââåäèòå êîëè÷åñòâî ïğåäìåòîâ:" << std::endl;
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¿Ñ€ĞµĞ´Ğ¼ĞµÑ‚Ğ¾Ğ²:" << std::endl;
             std::cin >> cnt_subjects;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -49,7 +49,7 @@ void AddStudent(std::vector<StudentData>& students) {
                 cnt_subjects = -1;
             }
             if (cnt_subjects < 1) {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         }
         std::vector<std::pair<std::string, double>> grades;
@@ -58,19 +58,19 @@ void AddStudent(std::vector<StudentData>& students) {
             bool check = true;
             do {
                 check = true;
-                std::cout << "Ââåäèòå íàçâàíèå ïğåäìåòà " << i + 1 << ":" << std::endl;
+                std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¿Ñ€ĞµĞ´Ğ¼ĞµÑ‚Ğ° " << i + 1 << ":" << std::endl;
                 std::getline(std::cin, name_subject);
                 for (auto [first, second] : grades) {
                     if (first == name_subject) {
                         check = false;
-                        std::cout << "ÎØÈÁÊÀ: Òàêîé ïğåäìåò óæå ñóùåñòâóåò" << std::endl;
+                        std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ¢Ğ°ĞºĞ¾Ğ¹ Ğ¿Ñ€ĞµĞ´Ğ¼ĞµÑ‚ ÑƒĞ¶Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒĞµÑ‚" << std::endl;
                         break;
                     }
                 }
             } while (!check);
             double average_grade = -1;
             while (average_grade < 2 || average_grade > 5) {
-                std::cout << "Ââåäèòå ñğåäíèé áàëë (îò 2 äî 5):" << std::endl;
+                std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¹ Ğ±Ğ°Ğ»Ğ» (Ğ¾Ñ‚ 2 Ğ´Ğ¾ 5):" << std::endl;
                 std::cin >> average_grade;
                 std::cin.ignore(10000, '\n');
                 if (std::cin.fail())
@@ -80,7 +80,7 @@ void AddStudent(std::vector<StudentData>& students) {
                     average_grade = -1;
                 }
                 if (average_grade < 2 || average_grade > 5) {
-                    std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                    std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
                 }
             }
             grades.push_back({ name_subject, round(average_grade * 10) / 10 });
@@ -89,11 +89,11 @@ void AddStudent(std::vector<StudentData>& students) {
         do
         {
             std::cout << std::endl
-                << "Çàäà÷à çàâåğøåíà" << std::endl;
-            std::cout << "1. Âûïîëíèòü çàäà÷ó åùå ğàç" << std::endl;
-            std::cout << "0. Âûõîä" << std::endl
+                << "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ°" << std::endl;
+            std::cout << "1. Ğ’Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñƒ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·" << std::endl;
+            std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
                 << std::endl;
-            std::cout << "Âûáåğèòå äåéñòâèå:" << std::endl;
+            std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -104,7 +104,7 @@ void AddStudent(std::vector<StudentData>& students) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -115,16 +115,16 @@ void ViewDatabase(std::vector<StudentData>& students) {
     do
     {
         std::cout << std::endl
-            << "= ÏĞÎÑÌÎÒĞ ÁÀÇÛ ÄÀÍÍÛÕ =" << std::endl;
+            << "= ĞŸĞ ĞĞ¡ĞœĞĞ¢Ğ  Ğ‘ĞĞ—Ğ« Ğ”ĞĞĞĞ«Ğ¥ =" << std::endl;
         if (students.size() == 0) {
-            std::cout << "Äàííûõ íåò" << std::endl;
+            std::cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ½ĞµÑ‚" << std::endl;
         }
         else
         {
             for (StudentData student : students) {
-                std::cout << std::endl << "Èìÿ ñòóäåíòà: " << student.name << std::endl;
-                std::cout << "Âîçğàñò ñòóäåíòà: " << student.age << std::endl;
-                std::cout << "Ïğåäìåòû è ñğåäíèå áàëëû:" << std::endl;
+                std::cout << std::endl << "Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.name << std::endl;
+                std::cout << "Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.age << std::endl;
+                std::cout << "ĞŸÑ€ĞµĞ´Ğ¼ĞµÑ‚Ñ‹ Ğ¸ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğµ Ğ±Ğ°Ğ»Ğ»Ñ‹:" << std::endl;
                 for (auto [name, average_grade] : student.grades) {
                     std::cout << name << " " << average_grade << std::endl;
                 }
@@ -133,11 +133,11 @@ void ViewDatabase(std::vector<StudentData>& students) {
         do
         {
             std::cout << std::endl
-                << "Çàäà÷à çàâåğøåíà" << std::endl;
-            std::cout << "1. Âûïîëíèòü çàäà÷ó åùå ğàç" << std::endl;
-            std::cout << "0. Âûõîä" << std::endl
+                << "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ°" << std::endl;
+            std::cout << "1. Ğ’Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñƒ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·" << std::endl;
+            std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
                 << std::endl;
-            std::cout << "Âûáåğèòå äåéñòâèå:" << std::endl;
+            std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -148,7 +148,7 @@ void ViewDatabase(std::vector<StudentData>& students) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -159,9 +159,9 @@ void StudentSearch(std::vector<StudentData>& students) {
     do
     {
         std::cout << std::endl
-            << "= ÏÎÈÑÊ ÑÒÓÄÅÍÒÀ =" << std::endl;
+            << "= ĞŸĞĞ˜Ğ¡Ğš Ğ¡Ğ¢Ğ£Ğ”Ğ•ĞĞ¢Ğ =" << std::endl;
         std::string name;
-        std::cout << "Ââåäèòå èìÿ ñòóäåíòà:" << std::endl;
+        std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°:" << std::endl;
         std::getline(std::cin, name);
         std::vector<StudentData> found_students;
         for (StudentData student : students) {
@@ -170,15 +170,15 @@ void StudentSearch(std::vector<StudentData>& students) {
             }
         }
         if (found_students.size() == 0) {
-            std::cout << "Ñòóäåíòû íå íàéäåíû" << std::endl;
+            std::cout << "Ğ¡Ñ‚ÑƒĞ´ĞµĞ½Ñ‚Ñ‹ Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½Ñ‹" << std::endl;
         }
         else
         {
-            std::cout << "Íàéäåííûå ñòóäåíòû:" << std::endl;
+            std::cout << "ĞĞ°Ğ¹Ğ´ĞµĞ½Ğ½Ñ‹Ğµ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ñ‹:" << std::endl;
             for (StudentData student : found_students) {
-                std::cout << std::endl << "Èìÿ ñòóäåíòà: " << student.name << std::endl;
-                std::cout << "Âîçğàñò ñòóäåíòà: " << student.age << std::endl;
-                std::cout << "Ïğåäìåòû è ñğåäíèå áàëëû:" << std::endl;
+                std::cout << std::endl << "Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.name << std::endl;
+                std::cout << "Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.age << std::endl;
+                std::cout << "ĞŸÑ€ĞµĞ´Ğ¼ĞµÑ‚Ñ‹ Ğ¸ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğµ Ğ±Ğ°Ğ»Ğ»Ñ‹:" << std::endl;
                 for (auto [name, average_grade] : student.grades) {
                     std::cout << name << " " << average_grade << std::endl;
                 }
@@ -187,11 +187,11 @@ void StudentSearch(std::vector<StudentData>& students) {
         do
         {
             std::cout << std::endl
-                << "Çàäà÷à çàâåğøåíà" << std::endl;
-            std::cout << "1. Âûïîëíèòü çàäà÷ó åùå ğàç" << std::endl;
-            std::cout << "0. Âûõîä" << std::endl
+                << "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ°" << std::endl;
+            std::cout << "1. Ğ’Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñƒ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·" << std::endl;
+            std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
                 << std::endl;
-            std::cout << "Âûáåğèòå äåéñòâèå:" << std::endl;
+            std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -202,7 +202,7 @@ void StudentSearch(std::vector<StudentData>& students) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -213,15 +213,15 @@ void ExportToFile(std::vector<StudentData>& students) {
     do
     {
         std::cout << std::endl
-            << "= İÊÑÏÎĞÒ ÁÀÇÛ ÄÀÍÍÛÕ Â ÔÀÉË =" << std::endl;
+            << "= Ğ­ĞšĞ¡ĞŸĞĞ Ğ¢ Ğ‘ĞĞ—Ğ« Ğ”ĞĞĞĞ«Ğ¥ Ğ’ Ğ¤ĞĞ™Ğ› =" << std::endl;
         std::ofstream file;
         file.open("StudentDatabase.txt");
         if (file.is_open())
         {
             for (StudentData student : students) {
-                file << "Èìÿ ñòóäåíòà: " << student.name << std::endl;
-                file << "Âîçğàñò ñòóäåíòà: " << student.age << std::endl;
-                file << "Ïğåäìåòû è ñğåäíèå áàëëû:" << std::endl;
+                file << "Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.name << std::endl;
+                file << "Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.age << std::endl;
+                file << "ĞŸÑ€ĞµĞ´Ğ¼ĞµÑ‚Ñ‹ Ğ¸ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğµ Ğ±Ğ°Ğ»Ğ»Ñ‹:" << std::endl;
                 for (auto [name, average_grade] : student.grades) {
                     file << name << " " << average_grade << std::endl;
                 }
@@ -229,17 +229,17 @@ void ExportToFile(std::vector<StudentData>& students) {
             }
         }
         else {
-            std::cout << "ÎØÈÁÊÀ: Íå óäàëîñü îòêğûòü ôàéë" << std::endl;
+            std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: ĞĞµ ÑƒĞ´Ğ°Ğ»Ğ¾ÑÑŒ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ğ°Ğ¹Ğ»" << std::endl;
         }
         file.close();
         do
         {
             std::cout << std::endl
-                << "Çàäà÷à çàâåğøåíà" << std::endl;
-            std::cout << "1. Âûïîëíèòü çàäà÷ó åùå ğàç" << std::endl;
-            std::cout << "0. Âûõîä" << std::endl
+                << "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ°" << std::endl;
+            std::cout << "1. Ğ’Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñƒ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·" << std::endl;
+            std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
                 << std::endl;
-            std::cout << "Âûáåğèòå äåéñòâèå:" << std::endl;
+            std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -250,26 +250,26 @@ void ExportToFile(std::vector<StudentData>& students) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
 }
 
 void AgeStatistics(std::vector<StudentData>& students) {
-    std::cout << std::endl << "Ğàñïğåäåëåíèå ñòóäåíòîâ ïî âîçğàñòàì" << std::endl << std::endl;
+    std::cout << std::endl << "Ğ Ğ°ÑĞ¿Ñ€ĞµĞ´ĞµĞ»ĞµĞ½Ğ¸Ğµ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ¾Ğ² Ğ¿Ğ¾ Ğ²Ğ¾Ğ·Ñ€Ğ°ÑÑ‚Ğ°Ğ¼" << std::endl << std::endl;
     std::map<int, std::vector<StudentData>> students_age;
     for (StudentData student : students) {
         students_age[student.age].push_back(student);
     }
     int cnt = 1;
     for (auto [key, value] : students_age) {
-        std::cout << cnt << ". Âîçğàñò: " << key << std::endl;
+        std::cout << cnt << ". Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚: " << key << std::endl;
         ++cnt;
         for (StudentData student : value) {
-            std::cout << std::endl << "Èìÿ ñòóäåíòà: " << student.name << std::endl;
-            std::cout << "Âîçğàñò ñòóäåíòà: " << student.age << std::endl;
-            std::cout << "Ïğåäìåòû è ñğåäíèå áàëëû:" << std::endl;
+            std::cout << std::endl << "Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.name << std::endl;
+            std::cout << "Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.age << std::endl;
+            std::cout << "ĞŸÑ€ĞµĞ´Ğ¼ĞµÑ‚Ñ‹ Ğ¸ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğµ Ğ±Ğ°Ğ»Ğ»Ñ‹:" << std::endl;
             for (auto [name, average_grade] : student.grades) {
                 std::cout << name << " " << average_grade << std::endl;
             }
@@ -287,19 +287,19 @@ double AverageGrade(StudentData& student) {
 }
 
 void GradeStatistics(std::vector<StudentData>& students) {
-    std::cout << "Ğåéòèíã ñòóäåíòîâ ïî ñğåäíåìó áàëëó" << std::endl << std::endl;
+    std::cout << "Ğ ĞµĞ¹Ñ‚Ğ¸Ğ½Ğ³ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ¾Ğ² Ğ¿Ğ¾ ÑÑ€ĞµĞ´Ğ½ĞµĞ¼Ñƒ Ğ±Ğ°Ğ»Ğ»Ñƒ" << std::endl << std::endl;
     std::map<double, std::vector<StudentData>, std::greater<double>> students_grades;
     for (StudentData student : students) {
         students_grades[AverageGrade(student)].push_back(student);
     }
     int cnt = 1;
     for (auto [key, value] : students_grades) {
-        std::cout << cnt << ". Ñğåäíèé áàëë: " << key << std::endl;
+        std::cout << cnt << ". Ğ¡Ñ€ĞµĞ´Ğ½Ğ¸Ğ¹ Ğ±Ğ°Ğ»Ğ»: " << key << std::endl;
         ++cnt;
         for (StudentData student : value) {
-            std::cout << std::endl << "Èìÿ ñòóäåíòà: " << student.name << std::endl;
-            std::cout << "Âîçğàñò ñòóäåíòà: " << student.age << std::endl;
-            std::cout << "Ïğåäìåòû è ñğåäíèå áàëëû:" << std::endl;
+            std::cout << std::endl << "Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.name << std::endl;
+            std::cout << "Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.age << std::endl;
+            std::cout << "ĞŸÑ€ĞµĞ´Ğ¼ĞµÑ‚Ñ‹ Ğ¸ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğµ Ğ±Ğ°Ğ»Ğ»Ñ‹:" << std::endl;
             for (auto [name, average_grade] : student.grades) {
                 std::cout << name << " " << average_grade << std::endl;
             }
@@ -313,9 +313,9 @@ void StatisticsOutput(std::vector<StudentData>& students) {
     do
     {
         std::cout << std::endl
-            << "= ÂÛÂÎÄ ÑÒÀÒÈÑÒÈÊÈ =" << std::endl;
+            << "= Ğ’Ğ«Ğ’ĞĞ” Ğ¡Ğ¢ĞĞ¢Ğ˜Ğ¡Ğ¢Ğ˜ĞšĞ˜ =" << std::endl;
         if (students.size() == 0) {
-            std::cout << "Äàííûõ íåò" << std::endl << std::endl;
+            std::cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ½ĞµÑ‚" << std::endl << std::endl;
         }
         else {
             AgeStatistics(students);
@@ -323,11 +323,11 @@ void StatisticsOutput(std::vector<StudentData>& students) {
         }
         do
         {
-            std::cout << "Çàäà÷à çàâåğøåíà" << std::endl;
-            std::cout << "1. Âûïîëíèòü çàäà÷ó åùå ğàç" << std::endl;
-            std::cout << "0. Âûõîä" << std::endl
+            std::cout << "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ°" << std::endl;
+            std::cout << "1. Ğ’Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñƒ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·" << std::endl;
+            std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
                 << std::endl;
-            std::cout << "Âûáåğèòå äåéñòâèå:" << std::endl;
+            std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ:" << std::endl;
             std::cin >> issue_number;
             std::cin.ignore(10000, '\n');
             if (std::cin.fail())
@@ -338,7 +338,7 @@ void StatisticsOutput(std::vector<StudentData>& students) {
             }
             if (issue_number != 1 && issue_number != 0)
             {
-                std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+                std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
             }
         } while (issue_number != 1 && issue_number != 0);
     } while (issue_number != 0);
@@ -350,15 +350,15 @@ void StudentDatabase() {
     do
     {
         std::cout << std::endl
-            << "== ÁÀÇÀ ÄÀÍÍÛÕ ÑÒÓÄÅÍÒÎÂ ==" << std::endl;
-        std::cout << "1. Äîáàâëåíèå íîâîãî ñòóäåíòà" << std::endl;
-        std::cout << "2. Ïğîñìîòğ áàçû äàííûõ" << std::endl;
-        std::cout << "3. Ïîèñê ñòóäåíòà" << std::endl;
-        std::cout << "4. İêñïîğò áàçû äàííûõ â ôàéë" << std::endl;
-        std::cout << "5. Âûâîä ñòàòèñòèêè" << std::endl;
-        std::cout << "0. Âûõîä" << std::endl
+            << "== Ğ‘ĞĞ—Ğ Ğ”ĞĞĞĞ«Ğ¥ Ğ¡Ğ¢Ğ£Ğ”Ğ•ĞĞ¢ĞĞ’ ==" << std::endl;
+        std::cout << "1. Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ğµ Ğ½Ğ¾Ğ²Ğ¾Ğ³Ğ¾ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°" << std::endl;
+        std::cout << "2. ĞŸÑ€Ğ¾ÑĞ¼Ğ¾Ñ‚Ñ€ Ğ±Ğ°Ğ·Ñ‹ Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…" << std::endl;
+        std::cout << "3. ĞŸĞ¾Ğ¸ÑĞº ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°" << std::endl;
+        std::cout << "4. Ğ­ĞºÑĞ¿Ğ¾Ñ€Ñ‚ Ğ±Ğ°Ğ·Ñ‹ Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ² Ñ„Ğ°Ğ¹Ğ»" << std::endl;
+        std::cout << "5. Ğ’Ñ‹Ğ²Ğ¾Ğ´ ÑÑ‚Ğ°Ñ‚Ğ¸ÑÑ‚Ğ¸ĞºĞ¸" << std::endl;
+        std::cout << "0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << std::endl
             << std::endl;
-        std::cout << "Âûáåğèòå äåéñòâèå: " << std::endl;
+        std::cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ: " << std::endl;
         std::cin >> issue_number;
         std::cin.ignore(10000, '\n');
         if (std::cin.fail())
@@ -389,7 +389,7 @@ void StudentDatabase() {
         }
         else if (issue_number != 0)
         {
-            std::cout << "ÎØÈÁÊÀ: Ââåäåíî íåêîğğåêòíîå ÷èñëî" << std::endl;
+            std::cout << "ĞĞ¨Ğ˜Ğ‘ĞšĞ: Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << std::endl;
         }
     } while (issue_number != 0);
 }

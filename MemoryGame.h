@@ -1,13 +1,13 @@
-#pragma once
+п»ї#pragma once
 
-// Генерация карт
+// Р“РµРЅРµСЂР°С†РёСЏ РєР°СЂС‚
 void MixCards(std::vector<std::vector<std::pair<int, bool>>>& field);
 
-// Вывод поля
+// Р’С‹РІРѕРґ РїРѕР»СЏ
 void InputField(std::vector<std::vector<std::pair<int, bool>>>& field);
 
-// Обработка хода игры
+// РћР±СЂР°Р±РѕС‚РєР° С…РѕРґР° РёРіСЂС‹
 void Game();
 
-// Интерактивный цикл для игры на память
+// РРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ С†РёРєР» РґР»СЏ РёРіСЂС‹ РЅР° РїР°РјСЏС‚СЊ
 void MemoryGame();
