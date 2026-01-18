@@ -25,16 +25,16 @@ void CaesarСipher(const std::string& text) {
     std::cout << "Зашифрованный текст" << std::endl;
     for (char c : text) {
         if (c >= 'A' && c <= 'Z') {
-            std::cout << static_cast<char>('A' + (c - 'A' + shift) % ('Z' - 'A'));
+            std::cout << static_cast<char>('A' + (c - 'A' + shift) % ('Z' - 'A' + 1));
         }
         else if (c >= 'a' && c <= 'z') {
-            std::cout << static_cast<char>('a' + (c - 'a' + shift) % ('z' - 'a'));
+            std::cout << static_cast<char>('a' + (c - 'a' + shift) % ('z' - 'a' + 1));
         }
         else if (c >= 'А' && c <= 'Я') {
-            std::cout << static_cast<char>('А' + (c - 'А' + shift) % ('Я' - 'А'));
+            std::cout << static_cast<char>('А' + (c - 'А' + shift) % ('Я' - 'А' + 1));
         }
         else if (c >= 'а' && c <= 'я') {
-            std::cout << static_cast<char>('а' + (c - 'а' + shift) % ('я' - 'а'));
+            std::cout << static_cast<char>('а' + (c - 'а' + shift) % ('я' - 'а' + 1));
         }
         else {
             std::cout << c;
