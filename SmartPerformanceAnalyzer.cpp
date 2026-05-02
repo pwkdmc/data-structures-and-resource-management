@@ -38,7 +38,7 @@ void EnteringSchoolGradeLog(std::vector<Student>& students) {
         std::cout << "Введите имя студента " << i + 1 << ":" << std::endl;
         std::string name;
         std::getline(std::cin, name);
-        students.push_back(Student(name));
+        students.push_back(Student{name});
     }
     int cnt_subjects = -1;
     while (cnt_subjects < 1) {

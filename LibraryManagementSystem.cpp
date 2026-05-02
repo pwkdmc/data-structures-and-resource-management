@@ -59,7 +59,7 @@ void AddBook(std::vector<Book>& books) {
                 std::cout << "ОШИБКА: Введено некорректное число" << std::endl;
             }
         }
-        books.push_back(Book(author, name, year, genre, (available == 0 ? false : true)));
+        books.push_back(Book{author, name, year, genre, (available == 0 ? false : true)});
         do
         {
             std::cout << std::endl
@@ -315,11 +315,11 @@ void StatisticsOutput(std::vector<Book>& books) {
 
 void LibraryManagementSystem() {
     std::vector<Book> books = {
-        Book("Чехов Антон", "Дама с собачкой", 1899, "Рассказ", true),
-        Book("Ремарк Эрих Мария", "Триумфальная арка", 1945, "Роман", false),
-        Book("Дойл Артур Конан", "Этюд в багровых тонах", 1887, "Детектив", true),
-        Book("Чехов Антон", "Враги", 1887, "Рассказ", true),
-        Book("Робертс Нора", "Яд бессмертия", 1996, "Детектив", false)
+        Book{"Чехов Антон", "Дама с собачкой", 1899, "Рассказ", true},
+        Book{"Ремарк Эрих Мария", "Триумфальная арка", 1945, "Роман", false},
+        Book{"Дойл Артур Конан", "Этюд в багровых тонах", 1887, "Детектив", true},
+        Book{"Чехов Антон", "Враги", 1887, "Рассказ", true},
+        Book{"Робертс Нора", "Яд бессмертия", 1996, "Детектив", false}
     };
     int issue_number;
     do

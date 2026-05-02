@@ -85,7 +85,7 @@ void AddStudent(std::vector<StudentData>& students) {
             }
             grades.push_back({ name_subject, round(average_grade * 10) / 10 });
         }
-        students.push_back(StudentData(name, age, grades));
+        students.push_back(StudentData{name, age, grades});
         do
         {
             std::cout << std::endl

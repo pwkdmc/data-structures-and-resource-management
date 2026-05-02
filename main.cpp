@@ -7,8 +7,6 @@
 
 int main()
 {
-    system("chcp 1251");
-    setlocale(LC_ALL, "rus");
     srand(time(0));
     int issue_number;
     do
